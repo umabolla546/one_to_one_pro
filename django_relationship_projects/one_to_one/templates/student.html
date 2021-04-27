@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% if stu %}
+    <table border="2">
+    <thead>
+    <th>cours id</th>
+    <th>cours name</th>
+    <th>Fee</th>
+    <th>student name</th>
+    <th>student age</th>
+    <th>student loaction</th>
+    <th>student id</th>
+    </thead>
+    {% for student in stu %}
+        <tr>
+        <td>{{ student.id }}</td>
+        <td>{{ student.cname }}</td>
+        <td>{{ student.fee }}</td>
+        <td>{{ student.abc.sname }}</td>
+        <td>{{ student.abc.age }}</td>
+        <td>{{ student.abc.location }}</td>
+        <td>{{ student.abc.id }}</td>
+
+{#        <td>{{ student.id }}</td>#}
+        </tr>
+
+    {% endfor %}
+
+    </table>
+{% endif %}
+</body>
+</html>
